@@ -188,7 +188,7 @@ export default function AdminDashboard() {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
               <Image
-                src="/ras-logo.png"
+                src="/"RAS+Logo_No+Text+August+2023_CMYK.png"
                 alt="RAS logo"
                 width={808}
                 height={534}
