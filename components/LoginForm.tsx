@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { signIn } from '@/lib/auth';
+import Image from 'next/image';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -40,7 +41,7 @@ export default function LoginForm() {
         <div className="text-center">
           <div className="mx-auto mb-2 flex h-24 w-40 items-center justify-center rounded-lg bg-green-800 px-2">
             <Image
-              src="/ras-logo.png"
+              src="/RAS+Logo_No+Text+August+2023_CMYK.png"
               alt="RAS logo"
               width={808}
               height={534}
