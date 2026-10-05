@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { supabase, User, JobSite, SafetySubmission } from '@/lib/supabase';
 import { getCurrentUser, signOut } from '@/lib/auth';
@@ -197,9 +198,18 @@ export default function FramerDashboard() {
       <header className="bg-green-700 text-white shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-bold">RAS Safety Portal</h1>
-              <p className="text-sm text-blue-200">Welcome, {user?.full_name}</p>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/ras-logo.png"
+                alt="RAS logo"
+                width={808}
+                height={534}
+                className="h-12 w-14 object-contain"
+              />
+              <div>
+                <h1 className="text-2xl font-bold">RAS Safety Portal</h1>
+                <p className="text-sm text-blue-200">Welcome, {user?.full_name}</p>
+              </div>
             </div>
             <button
               onClick={handleSignOut}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { signIn } from '@/lib/auth';
 
@@ -37,7 +38,16 @@ export default function LoginForm() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-green-700 via-green-600 to-green-500 px-4">
       <div className="max-w-md w-full space-y-8 bg-white p-8 rounded-xl shadow-2xl">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-green-700 mb-2">RAS</h1>
+          <div className="mx-auto mb-2 flex h-24 w-40 items-center justify-center rounded-lg bg-green-800 px-2">
+            <Image
+              src="/ras-logo.png"
+              alt="RAS logo"
+              width={808}
+              height={534}
+              priority
+              className="h-20 w-auto object-contain"
+            />
+          </div>
           <p className="text-gray-600 text-sm">Ron Anderson & Sons Ltd.</p>
           <h2 className="mt-6 text-2xl font-semibold text-gray-900">
             Safety Forms Portal
